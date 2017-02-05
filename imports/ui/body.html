@@ -2,8 +2,11 @@
   <div class="container">
     <header>
       <h1>Todo List</h1>
-    </header>
 
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Escreve, carai">
+      </form>
+    </header>
     <ul>
       {{#each tasks}}
         {{> task}}
@@ -13,5 +16,5 @@
 </body>
 
 <template name="task">
-  <li>{{text}}</li>
+  <li>{{text}}{{nome}}</li>
 </template>
